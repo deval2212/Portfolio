@@ -4,15 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deval Mistry – Portfolio</title>
+
+ 
+  <link rel="preload" href="style.css" as="style" />
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    as="style"
+    onload="this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+
+  <header role="banner">
     <h1>Deval Mistry</h1>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -20,20 +39,44 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Hello, I’m Deval 👋</h2>
-    <p>Front-End Developer & Design Enthusiast building creative and accessible digital experiences.</p>
+  
+  <section class="hero" aria-labelledby="intro-title">
+    <h2 id="intro-title">Hello, I’m Deval </h2>
+    <p>
+      Front-End Developer &amp; Design Enthusiast building creative and accessible digital experiences.
+    </p>
     <a class="btn" href="projects.html">View My Projects</a>
   </section>
 
-  <main>
-    <section>
-      <h2>About My Work</h2>
-      <p>I specialize in creating user-friendly and responsive websites that blend clean design with accessibility. My focus is on building projects that make technology easier for everyone to use.</p>
+  <main id="main" role="main">
+    <section aria-labelledby="about-work-title">
+      <h2 id="about-work-title">About My Work</h2>
+      <p>
+        I specialize in creating user-friendly and responsive websites that blend clean design with accessibility.
+        My focus is on building projects that make technology easier for everyone to use.
+      </p>
     </section>
+
+    
+    <figure class="hero-image">
+      <img
+        src="images/hero-800.webp"
+        srcset="
+          images/hero-400.webp 400w,
+          images/hero-800.webp 800w,
+          images/hero-1200.webp 1200w
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 1000px"
+        width="1000" height="600"
+        alt="Deval working on a laptop at a modern desk setup"
+        loading="eager"
+      />
+      <figcaption>Designing inclusive web experiences</figcaption>
+    </figure>
   </main>
 
-  <footer>
+ 
+  <footer role="contentinfo">
     <p>&copy; 2025 Deval Mistry | Portfolio Project – INFO 3130</p>
   </footer>
 </body>
