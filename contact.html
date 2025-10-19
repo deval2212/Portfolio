@@ -3,41 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – Deval Mistry</title>
+  <title>Contact  Deval Mistry</title>
+
+ 
+  <link rel="preload" href="style.css" as="style" />
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    as="style"
+    onload="this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  
+  <header role="banner">
     <h1>Contact Me</h1>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Let’s Connect</h2>
-      <form>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your full name" required>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+  <main id="main" role="main">
+    <section aria-labelledby="connect-title">
+      <h2 id="connect-title">Let’s Connect</h2>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+      
+      <form id="contactForm" action="#" method="post" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name <span aria-hidden="true">*</span></label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+          ></textarea>
+        </div>
 
         <button type="submit">Send Message</button>
       </form>
+
+      
+      <figure class="contact-illustration">
+        <img
+          src="images/contact-illustration-800.webp"
+          srcset="
+            images/contact-illustration-400.webp 400w,
+            images/contact-illustration-800.webp 800w,
+            images/contact-illustration-1200.webp 1200w
+          "
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 60vw, 800px"
+          width="800"
+          height="500"
+          alt=""
+          loading="lazy"
+        />
+      </figure>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Deval Mistry | Let's Build Something Great Together</p>
   </footer>
 </body>
