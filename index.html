@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deval Mistry – Portfolio</title>
 
-  <!-- Preload critical CSS and fonts for faster LCP -->
+ 
   <link rel="preload" href="style.css" as="style" />
   <link
     rel="preload"
@@ -23,10 +23,10 @@
 </head>
 
 <body>
-  <!-- Skip link for keyboard users -->
+
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Header landmark with ARIA navigation -->
+
   <header role="banner">
     <h1>Deval Mistry</h1>
     <nav role="navigation" aria-label="Main navigation">
@@ -39,19 +39,45 @@
     </nav>
   </header>
 
-  <!-- Hero section: visually engaging and accessible -->
+  
   <section class="hero" aria-labelledby="intro-title">
-    <h2 id="intro-title">Hello, I’m Deval 👋</h2>
+    <h2 id="intro-title">Hello, I’m Deval </h2>
     <p>
       Front-End Developer &amp; Design Enthusiast building creative and accessible digital experiences.
     </p>
     <a class="btn" href="projects.html">View My Projects</a>
   </section>
 
-  <!-- Main content area -->
   <main id="main" role="main">
     <section aria-labelledby="about-work-title">
       <h2 id="about-work-title">About My Work</h2>
       <p>
         I specialize in creating user-friendly and responsive websites that blend clean design with accessibility.
-        My focus is on building projects that make technology easier for everyone
+        My focus is on building projects that make technology easier for everyone to use.
+      </p>
+    </section>
+
+    
+    <figure class="hero-image">
+      <img
+        src="images/hero-800.webp"
+        srcset="
+          images/hero-400.webp 400w,
+          images/hero-800.webp 800w,
+          images/hero-1200.webp 1200w
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 1000px"
+        width="1000" height="600"
+        alt="Deval working on a laptop at a modern desk setup"
+        loading="eager"
+      />
+      <figcaption>Designing inclusive web experiences</figcaption>
+    </figure>
+  </main>
+
+ 
+  <footer role="contentinfo">
+    <p>&copy; 2025 Deval Mistry | Portfolio Project – INFO 3130</p>
+  </footer>
+</body>
+</html>
